@@ -1,5 +1,7 @@
 html, body { height: 100%; margin: 0; }
 
+.rec-marker-wrap { background: transparent; border: 0; }
+
 .rec-marker {
   width: 36px;
   height: 36px;

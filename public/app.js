@@ -1,6 +1,3 @@
-// Replace with your Mapbox public token. Restrict it by URL in the Mapbox dashboard.
-mapboxgl.accessToken = "REPLACE_WITH_MAPBOX_TOKEN";
-
 const CATEGORIES = {
   food:     { emoji: "🍜", color: "#ef4444", label: "Food" },
   coffee:   { emoji: "☕", color: "#a16207", label: "Coffee" },
@@ -17,13 +14,14 @@ const state = {
   activeRec: null,
 };
 
-const map = new mapboxgl.Map({
-  container: "map",
-  style: "mapbox://styles/mapbox/streets-v12",
-  center: [-74.006, 40.7128],
-  zoom: 11,
-});
-map.addControl(new mapboxgl.NavigationControl({ showCompass: false }), "bottom-right");
+const map = L.map("map", { zoomControl: false }).setView([40.7128, -74.006], 11);
+L.control.zoom({ position: "bottomright" }).addTo(map);
+
+L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+  subdomains: "abcd",
+  maxZoom: 20,
+}).addTo(map);
 
 async function load() {
   const res = await fetch("recs.json", { cache: "no-cache" });
@@ -56,27 +54,26 @@ function toggleCategory(key, chip) {
   }
   for (const { rec, marker } of state.markers.values()) {
     const visible = state.activeCategories.has(rec.category);
-    marker.getElement().style.display = visible ? "" : "none";
+    if (visible && !map.hasLayer(marker)) marker.addTo(map);
+    else if (!visible && map.hasLayer(marker)) map.removeLayer(marker);
   }
+}
+
+function makeIcon(cat) {
+  const html = `<div class="rec-marker" style="background:${cat.color};color:#fff">${cat.emoji}</div>`;
+  return L.divIcon({
+    html,
+    className: "rec-marker-wrap",
+    iconSize: [36, 36],
+    iconAnchor: [18, 18],
+  });
 }
 
 function renderMarkers() {
   for (const rec of state.recs) {
     const cat = CATEGORIES[rec.category] || CATEGORIES.other;
-    const el = document.createElement("div");
-    el.className = "rec-marker";
-    el.style.background = cat.color;
-    el.style.color = "#fff";
-    el.textContent = cat.emoji;
-    el.addEventListener("click", (e) => {
-      e.stopPropagation();
-      openRec(rec);
-    });
-
-    const marker = new mapboxgl.Marker({ element: el })
-      .setLngLat([rec.lon, rec.lat])
-      .addTo(map);
-
+    const marker = L.marker([rec.lat, rec.lon], { icon: makeIcon(cat) }).addTo(map);
+    marker.on("click", () => openRec(rec));
     state.markers.set(rec.slug, { rec, marker });
   }
 }
@@ -84,20 +81,24 @@ function renderMarkers() {
 function fitToRecs() {
   if (!state.recs.length) return;
   if (state.recs.length === 1) {
-    map.flyTo({ center: [state.recs[0].lon, state.recs[0].lat], zoom: 13 });
+    map.setView([state.recs[0].lat, state.recs[0].lon], 13);
     return;
   }
-  const bounds = new mapboxgl.LngLatBounds();
-  for (const r of state.recs) bounds.extend([r.lon, r.lat]);
-  map.fitBounds(bounds, { padding: 80, maxZoom: 14, duration: 800 });
+  const bounds = L.latLngBounds(state.recs.map((r) => [r.lat, r.lon]));
+  map.fitBounds(bounds, { padding: [80, 80], maxZoom: 14 });
+}
+
+function setActiveMarker(slug) {
+  for (const { marker } of state.markers.values()) {
+    marker.getElement()?.classList.remove("active");
+  }
+  const entry = state.markers.get(slug);
+  entry?.marker.getElement()?.classList.add("active");
 }
 
 function openRec(rec) {
   state.activeRec = rec;
-  for (const { marker } of state.markers.values()) {
-    marker.getElement().classList.remove("active");
-  }
-  state.markers.get(rec.slug)?.marker.getElement().classList.add("active");
+  setActiveMarker(rec.slug);
 
   const cat = CATEGORIES[rec.category] || CATEGORIES.other;
   const thumb = rec.thumbnail
@@ -124,14 +125,14 @@ function openRec(rec) {
     document.getElementById("sheet").classList.remove("translate-y-full");
   }
 
-  map.flyTo({ center: [rec.lon, rec.lat], zoom: Math.max(map.getZoom(), 13), speed: 0.8 });
+  map.flyTo([rec.lat, rec.lon], Math.max(map.getZoom(), 13), { duration: 0.8 });
 }
 
 function closeRec() {
   document.getElementById("sidebar").classList.add("translate-x-full");
   document.getElementById("sheet").classList.add("translate-y-full");
   for (const { marker } of state.markers.values()) {
-    marker.getElement().classList.remove("active");
+    marker.getElement()?.classList.remove("active");
   }
   state.activeRec = null;
 }
@@ -147,5 +148,5 @@ document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeRec()
 load().catch((err) => {
   console.error(err);
   document.getElementById("filters").innerHTML =
-    '<span class="text-sm text-red-600 px-3 py-1">Failed to load recs.json — run <code>python build.py</code></span>';
+    '<span class="text-sm text-red-600 px-3 py-1">Failed to load recs.json — run <code>uv run python build.py</code></span>';
 });
