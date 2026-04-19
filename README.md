@@ -54,6 +54,6 @@ Then open <http://localhost:8000>. No API keys needed.
 
 Connect the repo to Cloudflare Pages with these build settings:
 
-- **Build command:** `curl -LsSf https://astral.sh/uv/install.sh | sh && $HOME/.local/bin/uv sync && $HOME/.local/bin/uv run python build.py`
+- **Build command:** `sh build.sh`
 - **Build output directory:** `public`
 - **Environment variables:** `PYTHON_VERSION=3.12`
