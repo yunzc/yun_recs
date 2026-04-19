@@ -48,6 +48,7 @@ def build():
             "lon": float(post["lon"]),
             "thumbnail": post.get("thumbnail"),
             "date": str(post["date"]) if post.get("date") else None,
+            "maps_url": post.get("maps_url"),
             "title": {"en": title_en, "zh": title_zh},
             "html": {"en": render(body_en), "zh": render(body_zh)},
         })

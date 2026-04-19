@@ -146,7 +146,23 @@ function openRec(rec) {
     </div>
     ${thumb}
   `;
-  const body = header + html;
+  const mapsLabel = state.lang === "zh" ? "在 Google 地圖開啟" : "Open in Google Maps";
+  const mapsFooter = rec.maps_url
+    ? `<div class="not-prose mt-6 pt-4 border-t border-neutral-200">
+        <a href="${rec.maps_url}" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-neutral-300 hover:bg-neutral-50 hover:border-neutral-400 text-sm font-medium text-neutral-800 no-underline shadow-sm transition">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="w-5 h-5" aria-hidden="true">
+            <path fill="#1A73E8" d="M19.6 4.6c1.4-.4 2.9-.6 4.4-.6 5.5 0 10.4 2.8 13.3 7L26.7 23.3 19.6 4.6Z"/>
+            <path fill="#EA4335" d="M10.7 10.6C13.4 7.8 16.3 5.6 19.6 4.6l7.1 18.7-7.4 8.8L10.7 10.6Z"/>
+            <path fill="#4285F4" d="M24 28a6 6 0 1 0 0-12 6 6 0 0 0 0 12Zm0 16c1.1 0 7.9-9.6 13.3-19l-13.3-1.7L24 44Z"/>
+            <path fill="#FBBC04" d="M19.3 32.1 26.7 23.3 10.7 10.6C8.4 13 7 16.1 7 19.5c0 4.7 4.5 9.3 12.3 12.6Z"/>
+            <path fill="#34A853" d="M37.3 11c2.4 3 3.7 6.6 3.7 10.5 0 8.8-9.6 17-17 22.5L37.3 11Z"/>
+          </svg>
+          <span>${mapsLabel}</span>
+        </a>
+      </div>`
+    : "";
+  const body = header + html + mapsFooter;
 
   const isDesktop = window.matchMedia("(min-width: 768px)").matches;
   if (isDesktop) {
