@@ -27,18 +27,26 @@ Then open <http://localhost:8000>. No API keys needed.
 
    ```markdown
    ---
-   title: Place name
-   category: food  # food | coffee | drinks | scenery | activity | other
+   title_en: Place name
+   title_zh: 地方名稱
+   category: restaurant  # restaurant | snacks | scenery | activity | other
    lat: 40.7128
    lon: -74.0060
    date: 2026-04-18
    thumbnail: images/my-photo.jpg
+   content_zh: |
+     # 中文標題
+
+     中文內容。支援完整 Markdown 語法。
    ---
 
-   # Heading
+   # English heading
 
-   Your notes here. Full Markdown supported.
+   English body. Full Markdown supported.
    ```
+
+   Chinese fields are optional — posts with only English fall back to English
+   with a small "EN" badge when viewed in Chinese mode.
 
 3. Run `uv run python build.py` and commit. Cloudflare rebuilds on push.
 
