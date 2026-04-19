@@ -31,7 +31,11 @@ html, body { height: 100%; margin: 0; }
   user-select: none;
   transition: background 120ms ease, color 120ms ease;
   color: #525252;
+  flex-shrink: 0;
 }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
 .filter-chip.active { background: #171717; color: #fff; }
 .filter-chip:not(.active):hover { background: #f5f5f5; }
 
