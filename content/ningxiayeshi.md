@@ -4,9 +4,9 @@ title_zh: 寧夏夜市
 category: activity
 lat: 25.05601
 lon: 121.51527
-maps_url: https://www.google.com/maps/search/?api=1&query=%E5%AF%A7%E5%A4%8F%E5%A4%9C%E5%B8%82
+maps_url: https://maps.app.goo.gl/JQnjZF5ikxq5Aqts9
+thumbnail: images/ningxia.png
 content_zh: |
-  大稻埕傳統夜市，老派台味小吃。
+  炸芋頭球跟炸魷魚 林記麻辣鴨血豆腐 牛媽媽牛肉炒麵 香酥地瓜球 豆花莊甘蔗冰 燒麻糬冰 圓環邊跟賴記蚵仔煎
 ---
-
-Classic Dadaocheng night market featuring traditional Taiwanese eats.
+  Night Market!

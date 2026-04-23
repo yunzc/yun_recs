@@ -4,9 +4,11 @@ title_zh: 饒河夜市
 category: activity
 lat: 25.05122
 lon: 121.57775
-maps_url: https://www.google.com/maps/search/?api=1&query=%E9%A5%92%E6%B2%B3%E8%A1%97%E8%A7%80%E5%85%89%E5%A4%9C%E5%B8%82
+maps_url: https://maps.app.goo.gl/yUEDjLV1nwRGrfBX9
+thumbnail: images/raohe.png
 content_zh: |
-  松山老夜市，胡椒餅一絕。
+  偏觀光可是夜間 vibe 不錯! 胡椒餅 小明拔絲地瓜 難忘米粉湯 潤餅捲 杏花村（古早甜品） 嘉義紅茶 饒河街鹹水雞 下港臭豆腐 大腸包小腸 滷味
+
 ---
 
-Historic Songshan night market — pepper buns are the signature bite.
+Historic Songshan night market — pepper buns are signature.

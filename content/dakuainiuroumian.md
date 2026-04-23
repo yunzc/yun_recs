@@ -4,9 +4,10 @@ title_zh: 大塊牛肉麵
 category: restaurant
 lat: 25.03919
 lon: 121.52561
-maps_url: https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E5%A1%8A%E7%89%9B%E8%82%89%E9%BA%B5+%E6%9D%AD%E5%B7%9E%E5%8D%97%E8%B7%AF
+maps_url: https://maps.app.goo.gl/1f4vrPFEVLwTsAB67
+thumbnail: images/dakuai.jpg
 content_zh: |
-  招牌大塊牛肉麵，份量實在。
+  胸口(brisket)過橋麵超好吃！不過得早點去，每天份量有限。小菜切盤也好吃
 ---
 
-Beef noodles featuring generous, chunky cuts of beef.
+Beef noodle soup. Recommend the brisket beef noodles. Cold plates are amazing too.

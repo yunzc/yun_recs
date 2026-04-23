@@ -4,9 +4,10 @@ title_zh: 迪化街
 category: scenery
 lat: 25.05641
 lon: 121.51011
-maps_url: https://www.google.com/maps/search/?api=1&query=%E8%BF%AA%E5%8C%96%E8%A1%97
+maps_url: https://maps.app.goo.gl/amFNn5o1KvroaTiD6
+thumbnail: images/dihuajie.jpg
 content_zh: |
-  大稻埕老街，販售南北貨與茶葉。
+  大稻埕老街，販售南北貨與茶葉 爸媽喜歡來買乾貨
 ---
 
 Historic Dadaocheng street lined with dry goods, tea shops, and old architecture.
