@@ -4,9 +4,10 @@ title_zh: 新北投地熱谷
 category: scenery
 lat: 25.13732
 lon: 121.51136
-maps_url: https://www.google.com/maps/search/?api=1&query=%E5%9C%B0%E7%86%B1%E8%B0%B7%E6%99%AF%E8%A7%80%E5%85%AC%E5%9C%92
+maps_url: https://maps.app.goo.gl/1AeB1Pkr8byHtUfV8
+thumbnail: images/xinbeitou.jpg
 content_zh: |
-  北投硫磺蒸氣溫泉地熱景觀。
+  北投硫磺蒸氣溫泉地熱景觀 還有些懷舊的博物館 很有建築特色的圖書館
 ---
 
 Steaming sulfur hot-spring crater in Beitou — pair with a soak nearby.
