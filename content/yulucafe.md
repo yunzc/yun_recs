@@ -1,7 +1,7 @@
 ---
 title_en: Yu Lu Cafe
 title_zh: 與路咖啡
-category: snacks
+category: eat
 lat: 25.03899
 lon: 121.74026
 maps_url: https://maps.app.goo.gl/UokWn7QpL2W5YqueA

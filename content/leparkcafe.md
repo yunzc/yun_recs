@@ -1,7 +1,7 @@
 ---
 title_en: Le Park Cafe
 title_zh: 公園咖啡館
-category: snacks
+category: eat
 lat: 25.05393
 lon: 121.54340
 maps_url: https://maps.app.goo.gl/7bkgj4YP2aSVkWAN6

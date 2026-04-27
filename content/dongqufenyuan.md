@@ -1,7 +1,7 @@
 ---
 title_en: Eastern Ice Store
 title_zh: 東區粉圓
-category: snacks
+category: eat
 lat: 25.03952
 lon: 121.55283
 maps_url: https://maps.app.goo.gl/a7HQGneJ9eY25vNJ9

@@ -1,7 +1,7 @@
 ---
 title_en: Addiction Aquatic Development
 title_zh: 上引水產
-category: restaurant
+category: eat
 lat: 25.07067
 lon: 121.53837
 maps_url: https://maps.app.goo.gl/rKMnifogNeXHS9VGA

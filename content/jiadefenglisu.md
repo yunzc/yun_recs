@@ -1,7 +1,7 @@
 ---
 title_en: Chia Te Pineapple Cake
 title_zh: 佳德鳳梨酥
-category: snacks
+category: walk
 lat: 25.05183
 lon: 121.55763
 maps_url: https://maps.app.goo.gl/QqD6L3dmLHGZpGYk7

@@ -1,7 +1,7 @@
 ---
 title_en: Chang Wu Ji Flatbread Shop
 title_zh: 張吳記麵餅舖
-category: snacks
+category: eat
 lat: 25.02816
 lon: 121.52542
 maps_url: https://maps.app.goo.gl/umUKzg5jwvGctJ9V7

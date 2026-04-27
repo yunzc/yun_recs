@@ -1,7 +1,7 @@
 ---
 title_en: Yangmingshan
 title_zh: 陽明山
-category: scenery
+category: see
 lat: 25.15541
 lon: 121.56236
 maps_url: https://maps.app.goo.gl/JCEbrSVYJsKZWzRn9

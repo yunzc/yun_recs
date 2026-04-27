@@ -1,7 +1,7 @@
 ---
 title_en: Yongkang Beef Noodle
 title_zh: 永康牛肉麵
-category: restaurant
+category: eat
 lat: 25.03274
 lon: 121.53034
 maps_url: https://maps.app.goo.gl/Qc6DM514jvf6nQmz7

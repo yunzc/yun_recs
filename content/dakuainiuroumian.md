@@ -1,7 +1,7 @@
 ---
 title_en: Da Kuai Beef Noodle
 title_zh: 大塊牛肉麵
-category: restaurant
+category: eat
 lat: 25.03919
 lon: 121.52561
 maps_url: https://maps.app.goo.gl/1f4vrPFEVLwTsAB67

@@ -1,7 +1,7 @@
 ---
 title_en: Elephant Mountain
 title_zh: 象山
-category: scenery
+category: see
 lat: 25.02748
 lon: 121.57080
 maps_url: https://maps.app.goo.gl/XvcF4SuNHYMv8c6x6

@@ -1,9 +1,8 @@
 const CATEGORIES = {
-  restaurant: { emoji: "🍜", color: "#ef4444", en: "Restaurant", zh: "餐廳" },
-  snacks:     { emoji: "🥮", color: "#a16207", en: "Snacks",     zh: "小吃" },
-  scenery:    { emoji: "🏞️", color: "#059669", en: "Scenery",    zh: "風景" },
-  activity:   { emoji: "🎯", color: "#2563eb", en: "Activity",   zh: "活動" },
-  other:      { emoji: "📍", color: "#525252", en: "Other",      zh: "其他" },
+  eat:   { emoji: "🍜", color: "#ef4444", en: "Eat",   zh: "吃的" },
+  walk:  { emoji: "🛍️", color: "#2563eb", en: "Walk",  zh: "逛的" },
+  see:   { emoji: "🏞️", color: "#059669", en: "See",   zh: "看的" },
+  other: { emoji: "📍", color: "#525252", en: "Other", zh: "其他" },
 };
 
 const STRINGS = {

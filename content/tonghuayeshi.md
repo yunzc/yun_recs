@@ -1,7 +1,7 @@
 ---
 title_en: Tonghua Night Market
 title_zh: 通化夜市
-category: activity
+category: eat
 lat: 25.02820
 lon: 121.55357
 maps_url: https://maps.app.goo.gl/o8A1VtDaTWhAKV8FA

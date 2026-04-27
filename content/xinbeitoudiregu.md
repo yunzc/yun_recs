@@ -1,7 +1,7 @@
 ---
 title_en: Xinbeitou Thermal Valley
 title_zh: 新北投地熱谷
-category: scenery
+category: see
 lat: 25.13732
 lon: 121.51136
 maps_url: https://maps.app.goo.gl/1AeB1Pkr8byHtUfV8

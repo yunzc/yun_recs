@@ -1,7 +1,7 @@
 ---
 title_en: Ningxia Night Market
 title_zh: 寧夏夜市
-category: activity
+category: eat
 lat: 25.05601
 lon: 121.51527
 maps_url: https://maps.app.goo.gl/JQnjZF5ikxq5Aqts9

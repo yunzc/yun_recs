@@ -1,7 +1,7 @@
 ---
 title_en: Raohe Night Market
 title_zh: 饒河夜市
-category: activity
+category: eat
 lat: 25.05122
 lon: 121.57775
 maps_url: https://maps.app.goo.gl/yUEDjLV1nwRGrfBX9
