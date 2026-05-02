@@ -1,7 +1,7 @@
 ---
 title_en: Jiufen Old Street
 title_zh: 九份老街
-category: walk
+category: see
 lat: 25.10980
 lon: 121.84520
 maps_url: https://maps.app.goo.gl/T1PLfdmGuznF5tCV8

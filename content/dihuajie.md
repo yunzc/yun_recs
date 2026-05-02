@@ -1,7 +1,7 @@
 ---
 title_en: Dihua Street
 title_zh: 迪化街
-category: walk
+category: see
 lat: 25.05641
 lon: 121.51011
 maps_url: https://maps.app.goo.gl/amFNn5o1KvroaTiD6

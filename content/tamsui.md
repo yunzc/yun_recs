@@ -1,7 +1,7 @@
 ---
 title_en: Tamsui Old Street
 title_zh: 淡水老街
-category: walk
+category: see
 lat: 25.16910
 lon: 121.44411
 maps_url: https://maps.app.goo.gl/dYp3TzVe5fWZY3tp6

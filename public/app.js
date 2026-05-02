@@ -1,7 +1,6 @@
 const CATEGORIES = {
-  eat:   { emoji: "🍜", color: "#ef4444", en: "Eat",   zh: "吃的" },
-  walk:  { emoji: "🛍️", color: "#2563eb", en: "Walk",  zh: "逛的" },
-  see:   { emoji: "🏞️", color: "#059669", en: "See",   zh: "看的" },
+  eat:   { emoji: "🍜", color: "#ef4444", en: "Eat",   zh: "大吃大喝" },
+  see:   { emoji: "🏞️", color: "#059669", en: "See",   zh: "走馬看花" },
   other: { emoji: "📍", color: "#525252", en: "Other", zh: "其他" },
 };
 
